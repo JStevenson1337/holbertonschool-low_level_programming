@@ -5,9 +5,9 @@
  * a multilingual puzzle, followed by a new line.
  */
 /**
- * main - Void
+ * main - Entry point
  *
- Return: String
+ *Return: literal value of string
  */
 int main(void)
 {
