@@ -1,8 +1,8 @@
 #include<stdio.h>
-/* Hello World */
-int main(void)
+int main(void) 
 {
-printf("Hello World!\n");
-return (0);
-
+for (a = 0; a < b; a++)
+{
+    printf("%d\n", a);
+}
 }
