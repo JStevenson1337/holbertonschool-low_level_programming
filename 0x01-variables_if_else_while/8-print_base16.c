@@ -5,7 +5,7 @@
  *I/
 
  /**
- *main base 16
+ *main - printing hex a-f base 16
  *
  *Return: 0
  */
