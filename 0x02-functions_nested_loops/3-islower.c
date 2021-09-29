@@ -9,7 +9,7 @@
 {
 	if (c >= 'a' && c <= 'z')
 	{
-		return _islower;
+		return (1);
 	}
 	else
 	{
