@@ -5,7 +5,8 @@
  *
  */
 /**
- * main - loops and print the alphabet omitting q and e
+ *main - loops and prints the alphabet omitting q and e
+ *
  *Return: 0
  *
  */
