@@ -1,11 +1,12 @@
 #include<stdio.h>
 /*
- * Write a program that prints the lowercase alphabet in reverse, followed  * *by a new line.
+ * Write a program that prints the lowercase  alphabet in reverse
+ * , followed  * *by a new line.
  */
 /**
  *main - print alphabet backwords
  *
- *Return: 0 if runs succesful
+ *Return: 0
  */
 int main(void)
 {

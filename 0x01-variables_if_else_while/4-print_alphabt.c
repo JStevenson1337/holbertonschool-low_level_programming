@@ -1,11 +1,16 @@
 #include<stdio.h>
-/*Write a program that prints the alphabet
+/*
+ * Write a program that prints the alphabet
  *in lowercase, followed by a new line.
  */
+
  /**
- *main- prints the alphabet
+ *
+ * main - prints the alphabet
+ *omitting q e
  *
  *Return: 0
+ *
  */
 int main(void)
 {
