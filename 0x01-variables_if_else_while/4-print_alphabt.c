@@ -2,13 +2,10 @@
 /*
  * Write a program that prints the alphabet
  *in lowercase, followed by a new line.
+ *
  */
-
- /**
- *
- * main - prints the alphabet
- *omitting q e
- *
+/**
+ * main - loops and print the alphabet omitting q and e
  *Return: 0
  *
  */
