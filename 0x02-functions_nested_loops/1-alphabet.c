@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+ * main - print the alphabet 10x
+ **
+ *Return: void
+ *     */
 void print_alphabet(void)
 {
 	char _a;
