@@ -2,9 +2,11 @@
 /*
  *program that prints all the numbers of base 16 in lowercase
  *, followed by a* * new line.
- *I/
+ */
 
- /**
+
+
+/*
  *main - printing hex a-f base 16
  *
  *Return: 0
