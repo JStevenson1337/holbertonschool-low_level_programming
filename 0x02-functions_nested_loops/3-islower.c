@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- *
- *  islower - finds the lower number
+ *  _islower - Finds the lower number
+ *  @c: variable to be checked
  *
  *  Return: 1
  */
- int _islower (int c)
+int _islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{
