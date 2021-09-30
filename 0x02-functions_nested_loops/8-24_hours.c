@@ -25,9 +25,9 @@ _putchar(m2);
 _putchar('\n');
 }
 }
-if (h1 == 2 && h2 == 3)
+if (h1 == '2' && h2 == '3')
 {
-break;
+	break;
 }
 }
 }
