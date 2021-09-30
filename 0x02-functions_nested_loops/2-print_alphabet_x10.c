@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - print the alphabet 10x
+ * print_alphabet_x10 - print the alphabet 10x
  *
  * Return: void
  */
@@ -8,6 +8,7 @@ void print_alphabet_x10(void)
 {
 	char _a;
 	int i;
+
 	i = 0;
 	while (i < 10)
 	{

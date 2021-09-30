@@ -1,10 +1,10 @@
 # include "main.h"
 /**
  * *  print_last_digit - Prints last digit of n
- * * @n:
+ * * @n: vairable to check condition
  * * Description: The above
  * * Return: Value computed to be the last digit of n
- * */
+ */
 
 int print_last_digit(int n)
 {

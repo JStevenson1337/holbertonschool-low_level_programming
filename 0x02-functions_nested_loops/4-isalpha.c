@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *  _isaplha - Check to see if an input is an english character
+ *  _isalpha - Check to see if an input is an english character
  *  @c: Variable to check condition
  *
  *  Return: 1 if true
