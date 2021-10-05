@@ -1,7 +1,6 @@
 #include "main.h"
 /**
  * more_number - Function Prints 0-14 10x
- *	
  * Return: void
  *
  */
