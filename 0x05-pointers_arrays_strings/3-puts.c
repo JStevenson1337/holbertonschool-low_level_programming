@@ -5,12 +5,10 @@
  *	@str: string passed into function
  * Return: Void
  */
-void _puts(char *str)
-{
-	while (*str != '\0')
-	{
-		_putchar(*str);
-		str++;
-	}
-	_putchar('\n');
+void _puts(char *str) {
+  while (*str != '\0') {
+    _putchar(*str);
+    str++;
+  }
+  _putchar('\n');
 }
