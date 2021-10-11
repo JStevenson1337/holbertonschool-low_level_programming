@@ -1,0 +1,24 @@
+#include "main.h"
+/**
+ * _memcpy - function start
+ * @dest: Pointer Destination
+ * @src: Pointer source
+ * @n: number of bytes to copy
+ * Description: copies memory between pointers
+ */
+
+char *_memcpy(char *dest, char *src, unsigned int n);
+{
+
+	unsigned int i;
+
+	char *csrc = (char *)src;
+	char *cdest = (char *)dest;
+
+	while (csrc[i] != '\0')
+		cdest[i] = csrc[i];
+
+	return (dest)
+}
+
+	
