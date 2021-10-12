@@ -6,21 +6,24 @@
  * Description: function that gets the length of a prefix substring
  * Return: count not matching
  */
-unsigned int *_strspn(char *s, char *accept)
-{	int i, j = 0;
-	char *a = accept;
+unsigned int _strspn(char *s, char *accept)
+{
+	unsigned int i, j;
 
-	while (*s != '\0')
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (*s != *a)
-		{
-			a++;
-			s++;
-			j++;
-		}
-		i++;
-		s++;
+		for (j = 0; accept[j] != '\0'; j++)
+			{
+				if (accept[j] == s[i])
+				{
+					break;
+				}
+			}
+			if (accept[j] == '\0')
+			{
+				return (i);
+			}
 	}
-	return (j);
-}
+	return (i);
 
+}
