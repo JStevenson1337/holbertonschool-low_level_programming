@@ -1,9 +1,10 @@
 #include "holberton.h"
 /**
- * _strncat - append a strin to another string
+ * _strncat - function start
  * @src: source srting(s)
  * @dest: Destination String
  * @n: number of bytes
+ * Description: append a string to another
  * Return: dest
  */
 char *_strncat(char *dest, char *src, int n)

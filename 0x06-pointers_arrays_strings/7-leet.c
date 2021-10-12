@@ -11,7 +11,7 @@ char *leet(char *str)
 	int i;
 
 	while (str[i] != '\0')
-	{
+	{
 		*p1 = pre[0];
 		*(p1++); 
 	}
