@@ -5,6 +5,7 @@
  * @b: constant bytes
  * @n: number of bytes
  * Decsription: function that fills memory with a constant byte.
+ * Return: mutated string
  */
 
 char *_memset(char *s, char b, unsigned int n)
@@ -13,7 +14,7 @@ char *_memset(char *s, char b, unsigned int n)
 
 	for (i = 0; i < n; i++)
 	{
-		*(s + i) = b;
+		s[i] = b;
 	}
 
 	return (s);
