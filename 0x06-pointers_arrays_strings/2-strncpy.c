@@ -9,13 +9,13 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	while (*src && num--)
+	while (*src && n--)
 	{
 		*dest = *src;
-    	dest++;
-    	src++;
+		dest++;
+		src++;
 	}
-
-	*destination = '\0';
+	*dest = '\0';
+	return (dest);
 }
 
