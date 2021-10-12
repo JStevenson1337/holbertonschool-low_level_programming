@@ -2,13 +2,14 @@
 #include <stdio.h>
 
 /**
- * _strspn - function start
+ * print_diagsums - function start
  * @s: String passed in
- * @accept: comparison string
- * Description: function that gets the length of a prefix substring
- * Return: count not matching
+ * @size = size of array
+ * Description: "function that prints the sum of the two diagonals of a 
+ * square matrix" 
+ * Return: results
  */
- void print_diagsums(int *a, int size)
+void print_diagsums(int *a, int size)
 {
 	int iter, i = 0, d1 = 0, d2 = 0;
 

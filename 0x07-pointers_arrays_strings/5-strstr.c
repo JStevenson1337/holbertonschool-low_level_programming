@@ -10,20 +10,10 @@ int string_length(char s[]);
  */
 char *_strstr(char *haystack, char *needle)
 {
-  unsigned int i;
+	unsigned int i;
 
-  for (i = 0; *(haystack + i) != '\0'; i++)
-		if (*(needle, (haystack + i)))
+	for (i = 0; *(haystack + i) != '\0'; i++)
+		if (*needle, (haystack + i))
 			return (haystack + i);
-
 	return (NULL);
-
-}
-
-int string_length(char s[]) {
-  int c = 0;
-  while (s[c] != '\0')
-    c++;
-
-  return c;
 }
