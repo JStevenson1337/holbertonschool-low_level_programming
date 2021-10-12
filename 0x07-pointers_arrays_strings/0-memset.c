@@ -5,7 +5,7 @@
  * @b: constant bytes
  * @n: number of bytes
  * Decsription: function that fills memory with a constant byte.
- * Return: mutated string
+ * Return: mutated string
  */
 
 char *_memset(char *s, char b, unsigned int n)
