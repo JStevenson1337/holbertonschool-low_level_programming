@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * _strcat - append a strin to another string
+ * _strncat - append a strin to another string
  * @src: source srting(s)
  * @dest: Destination String
  * @n: number of bytes
