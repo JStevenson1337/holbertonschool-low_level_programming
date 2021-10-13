@@ -9,10 +9,11 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	do {
-		++s1;
-		++s2;
-	} while (*s1 && *s2);
-
+	while (*s1 != '\0' && *s2 != '\0' && *s1 - *s2 == 0)
+	{
+		s1++;
+		s2++;
+	}
+	/* now return the difference */
 	return (*s1 - *s2);
 }

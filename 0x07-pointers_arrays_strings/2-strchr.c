@@ -2,9 +2,9 @@
 /**
  * _strchr - function start
  * @s: String passed in
- * @c: Character to ofind
+ * @c: Character to find
  * Description: find a char in a given string
- * Return: strin if found; else NULL
+ * Return: string if found; else NULL
  */
 char *_strchr(char *s, char c)
 {
