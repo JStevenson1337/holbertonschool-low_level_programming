@@ -9,9 +9,11 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
+
 	unsigned int i;
 
-	while (!*s++)
+
+	while (s[i] != '\0')
 	{
 		for (i = 0; accept[i] != '\0'; i++)
 		{
@@ -24,3 +26,4 @@ char *_strpbrk(char *s, char *accept)
 	}
 	return (0);
 }
+
