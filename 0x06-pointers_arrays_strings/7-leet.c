@@ -1,25 +1,29 @@
-#include "main.h"
+#include "holberton.h"
 /**
- *
- *
- *
+ * leet - function start
+ * @s: string to manipulate
+ * Return: pointer to leet string
+ * Description: translate string to leet speak
  */
-char *leet(char *str)
+
+char *leet(char *s)
 {
-	char pre[] = {'a','A','e','E','o','O','t','T','l','L'};
-	char post[] = {'4','4','3','3','0','0','7','7','1','1'};
+	char leet[5] = {'4', '3', '0', '7', '1'};
+	char upper[5] = {'a', 'e', 'o', 't', 'l'};
+	char lower[5] = {'A', 'E', 'O', 'T', 'L'};
 	int i;
+	int len = 0;
 
-	while (str[i] != '\0')
-	{
-		*p1 = pre[0];
-		*(p1++); 
-	}
-		
-
+	while (*s != '\0')
 	{
-		
+		for (i = 0; i < 5; i++)
+		{
+			if ((*s == upper[i]) || (*s == lower[i]))
+				*s = leet[i];
+		}
+		len++;
+		s++;
 	}
-	return (*str);	
-
+	s -= len;
+	return (s);
 }
