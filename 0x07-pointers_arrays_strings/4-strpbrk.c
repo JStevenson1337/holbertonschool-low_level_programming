@@ -4,7 +4,7 @@
  * @s: begin string
  * @accept: comparison string
  * Description: function that searches string
- * Return:
+ * Return: mutated string
  */
 char *_strpbrk(char *s, char *accept)
 {
@@ -20,6 +20,7 @@ char *_strpbrk(char *s, char *accept)
 			}
 		}
 		s++;
+
 	} while (*s != '\0');
 
 	return (0);
