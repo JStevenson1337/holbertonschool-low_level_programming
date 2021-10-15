@@ -1,20 +1,17 @@
-# include "main.h"
+
 /**
  * _strpbrk - function start
  * @s: begin string
  * @accept: comparison string
- * Description: "function that searches a
- * * string for any of a set of bytes."
- * Return: Return value is char
+ * Description: function that searches string
+ * Return:
  */
 char *_strpbrk(char *s, char *accept)
 {
 
-	unsigned int i;
+	int i;
 
-
-	while (s[i] != '\0')
-	{
+	do {
 		for (i = 0; accept[i] != '\0'; i++)
 		{
 			if (accept[i] == *s)
@@ -23,7 +20,7 @@ char *_strpbrk(char *s, char *accept)
 			}
 		}
 		s++;
-	}
+	} while (*s != '\0');
+
 	return (0);
 }
-
