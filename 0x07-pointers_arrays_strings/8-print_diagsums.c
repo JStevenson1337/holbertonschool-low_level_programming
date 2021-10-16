@@ -5,7 +5,8 @@
  * print_diagsums - function start
  * @a: String passed in
  * @size: size of array
- * Description: prints the sum of the two diagonals of a square matrix
+ * Description: "function that prints the sum of the two diagonals of a
+ * square matrix"
  * Return: results
  */
 void print_diagsums(int *a, int size)
@@ -32,3 +33,4 @@ void print_diagsums(int *a, int size)
 	}
 	printf("%d\n", sumrl);
 return;
+}
