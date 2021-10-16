@@ -7,16 +7,19 @@
  */
 void print_chessboard(char (*a)[8])
 {
-	unsigned int i, j;
-	const unsigned int e = 8;
+	int l;
+	int n;
 
-
-	for (i = 0; i < e; i++)
+	for (l = 0; l < 8; l++)
 	{
-		for (j = 0; j < e; j++)
+		for (n = 0; n < 8; n++)
 		{
-			_putchar(*(*(a + i) + j));
-			_putchar('\n');
+			_putchar(a[l][n]);
+			if (n == 7)
+			{
+				_putchar('\n');
+			}
 		}
 	}
+return;
 }

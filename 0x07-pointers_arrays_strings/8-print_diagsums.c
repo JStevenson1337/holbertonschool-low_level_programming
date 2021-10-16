@@ -3,21 +3,32 @@
 
 /**
  * print_diagsums - function start
- * @s: String passed in
- * @size = size of array
+ * @a: String passed in
+ * @size: size of array
  * Description: prints the sum of the two diagonals of a square matrix
  * Return: results
  */
 void print_diagsums(int *a, int size)
 {
-	int iter, i = 0, d1 = 0, d2 = 0;
+	int l;
+	int y = 0;
+	int sumlr = 0;
+	int sumrl = 0;
 
-	for (iter = 0; iter < size; iter++)
+	for (l = 0; l < size; l++)
 	{
-		i = (iter % size);
-		d1 += *(a + i + (i * size));
-		d2 += *(a + i + ((size - 1 - i) * size));
+		sumlr += a[y];
+		y++;
+		a = a + size;
 	}
-	printf("%d, %d\n", d1, d2);
-}
-
+	a = a - (size * l);
+	printf("%d, ", sumlr);
+	y = size - 1;
+	for (l = 0; l < size; l++)
+	{
+		sumrl += a[y];
+		y--;
+		a = a + size;
+	}
+	printf("%d\n", sumrl);
+return;
