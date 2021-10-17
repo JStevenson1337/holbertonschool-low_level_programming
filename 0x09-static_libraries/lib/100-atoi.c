@@ -1,5 +1,5 @@
 #include "main.h"
-int myAtoi(char* str)
+int _atoi(char* str)
 {
 	int res = 0;
 

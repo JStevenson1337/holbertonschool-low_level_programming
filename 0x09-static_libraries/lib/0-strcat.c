@@ -7,19 +7,19 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int start = 0;
+	int i = 0;
 
 	while (*dest)
 	{
 		dest++;
-		start++;
+		i++;
 	}
 	while (*src)
 	{
 		src++;
 		*(dest++) = *(src++);
-		start++;
+		i++;
 	}
-	dest = dest - start
+	dest = dest - i;
 	return (dest);
 }
