@@ -1,7 +1,7 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * _strncat - function start
- * @src: source srting(s)
+ * @src: source string(s)
  * @dest: Destination String
  * @n: number of bytes
  * Description: append a string to another

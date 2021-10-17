@@ -1,3 +1,4 @@
+#include "main.h"
 int myAtoi(char* str)
 {
 	int res = 0;

@@ -1,5 +1,6 @@
-int _strlen(char *s);
 #include <stdio.h>
+
+int _strlen(char *s);
 /**
  * _strstr - start
  * @haystack: search space
