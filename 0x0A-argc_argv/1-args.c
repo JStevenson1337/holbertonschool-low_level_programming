@@ -15,7 +15,7 @@
      {
          for (i = 1; i < argc; i++)
          {
-             printf("%d",argv)
+             printf("%d",argcArgv)
          }
      }
 

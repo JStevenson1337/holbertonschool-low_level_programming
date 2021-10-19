@@ -1,4 +1,3 @@
 #!/bin/bash
-gcc -Wall -Werror -Wextra -pedantic -c *.c
-ar -rc libmy.a *.o
-
+gcc ./*.c -c -fPIC
+ar rc liball.a ./*.o
