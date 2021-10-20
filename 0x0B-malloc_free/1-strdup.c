@@ -11,8 +11,8 @@ char *_memcpy(char *dest, char *src, unsigned int n);
 char *_strdup(char *str)
 {
 
-	int len = _strlen(str) + 1; 
-	char* dupstr = (char*) malloc ((len + 1) * sizeof(char));
+	int len = _strlen(str); 
+	char* dupstr = (char*) malloc ((len) * sizeof(char));
 
 	if (dupstr == NULL)
 	{
