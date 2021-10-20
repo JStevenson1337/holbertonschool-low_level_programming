@@ -2,10 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * create_array - Create a array object
+ * create_array - function start
  * @size: of bytes to allocate
  * @c: char passed from constructor
- * Return -  pointer to array
+ * Return: ptr
+ * Description: initializes an array
  */
 char *create_array(unsigned int size, char c)
 {
