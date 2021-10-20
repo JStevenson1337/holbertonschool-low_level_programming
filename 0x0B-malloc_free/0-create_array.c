@@ -3,8 +3,8 @@
 #include <stdlib.h>
 /**
  * create_array - Create a array object
- * @param size of bytes to allocate
- * @param c: char passed from constructor
+ * @size: of bytes to allocate
+ * @c: char passed from constructor
  * @return ptr*
  */
 char *create_array(unsigned int size, char c)
