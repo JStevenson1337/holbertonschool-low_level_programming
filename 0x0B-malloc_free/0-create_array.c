@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * *create_array - Create a array object
+ * create_array - Create a array object
  * @size: of bytes to allocate
  * @c: char passed from constructor
  * Return -  pointer to array
