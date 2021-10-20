@@ -13,7 +13,7 @@ char *_memcpy(char *dest, char *src, unsigned int n);
 char *_strdup(char *str)
 {
 	int len = _strlen(str);
-	char *dupstr = (char *str) malloc((len) * sizeof(char));
+	char *dupstr = malloc((len) * sizeof(char));
 
 	if (dupstr == NULL)
 	{
