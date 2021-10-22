@@ -15,6 +15,8 @@ char *_strdup(char *str)
 	int len = _strlen(str);
 	char *dupstr = malloc((len) * sizeof(char));
 
+	if (str == NULL)
+		return (NULL);
 	if (dupstr == NULL)
 	{
 		return (NULL);
@@ -25,13 +27,9 @@ char *_strdup(char *str)
 	}
 	return (dupstr);
 }
-
-
 /**
  * _strlen - allocates space in memory and copies given string to it
  * @str: string to copy in
- *
- *
  * Return: length
  */
 int _strlen(char *str)
@@ -44,7 +42,6 @@ int _strlen(char *str)
 	}
 	return (n);
 }
-
 /**
  * _memcpy - function start
  * @dest: Pointer Destination
@@ -56,7 +53,6 @@ int _strlen(char *str)
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
-
 	char *csrc = (char *)src;
 	char *cdest = (char *)dest;
 
@@ -64,6 +60,5 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	{
 		cdest[i] = csrc[i];
 	}
-
 	return (dest);
 }
