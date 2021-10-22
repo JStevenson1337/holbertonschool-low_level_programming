@@ -1,14 +1,12 @@
 #include <stdio.h>
 /**
  * main - Function start
- * @argc:  # of variable
- * @argv: variable
  * Return: Name of self
  * Description: Printe own name
  *
  */
-int main(int argc __attribute__((unused)), char *argv[])
+int main(void)
 {
-	printf("%s\n", argv[0]);
+	printf("%s\n", __FILE__);
 	return (0);
 }
