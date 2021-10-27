@@ -1,15 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
-/** @brief Prints a dog
+/**
+ * print_dog - function start
+ * Description: Prints a dog
+ * @d: pointer to dog
  *
- * @param dog The dog to print
- * @return void
  *
  */
 void print_dog(struct dog *d)
 {
-	if ( d != NULL )
+	if (d != NULL)
 	{
 		if (d->name == NULL)
 			d->name = "(nil)";
