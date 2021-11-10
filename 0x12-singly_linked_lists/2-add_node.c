@@ -5,7 +5,7 @@
 #include "_strlen.c"
 
 
-unsigned int _strlen(char *str);
+
 /**
  * add_node - adds a node to a linked list
  * @head: double pointer to a linked list
