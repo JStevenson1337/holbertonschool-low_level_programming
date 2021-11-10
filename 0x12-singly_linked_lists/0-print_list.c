@@ -1,7 +1,4 @@
-#include <stdlib.h>
 #include "lists.h"
-#include <stdio.h>
-#include <stddef.h>
 /**
  * print_list - Counts the number of Elements
  * @h: Variable linked list
