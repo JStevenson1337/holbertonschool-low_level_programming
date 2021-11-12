@@ -2,25 +2,49 @@
 
 int countNums(unsigned int n);
 /**
- * @brief  Prints a binary number
- * @param  n: Number to be printed
- * @retval None
+ * print_binary - prints the binary representation of a number
+ * @n: number to be printed
+ * Return: void
  */
 void print_binary(unsigned long int n)
 {
-	unsigned i;
-    for (i = 1 << countNums(n); i > 0; i = i / 2)
-        (n & i) ? printf("1") : printf("0");
+	int i;
 
+	int count = countNums(n);
+
+	if (n == 0)
+	{
+		printf("0");
+	}
+	else
+	{
+		for (i = count - 1; i >= 0; i--)
+		{
+			if (n & (1 << i))
+			{
+				printf("1");
+			}
+			else
+			{
+				printf("0");
+			}
+		}
+	}
 }
 
+/**
+ * countNums - counts the number of bits in a number
+ * @n: number to be counted
+ * Return: number of bits
+ */
 int countNums(unsigned int n)
 {
-	unsigned int count = 0;
-	while(n != 0)
+	int count = 0;
+
+	while (n)
 	{
-		n = n/10;
 		count++;
+		n >>= 1;
 	}
-	return count;
+	return (count);
 }
