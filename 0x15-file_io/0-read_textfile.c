@@ -3,6 +3,7 @@
  * read_textfile - Read a file and outputs to SDTOUT
  * @filename: pointer to file
  * @letters: memory
+ * Return: byte read
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
