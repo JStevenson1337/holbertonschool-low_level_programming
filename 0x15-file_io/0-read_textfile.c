@@ -42,24 +42,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 
 
-// {
-// 	int file, rd, wr;
-// 	char *buf;
 
-// 	if (filename == NULL)
-// 		return (0);
 
-// 	file = fopen(filename, O_RDONLY);
-
-// 	if (file == -1)
-// 		return (0);
-
-// 	buf = malloc(sizeof(char) * letters + 1);
-// 	if (buf == NULL)
-// 		return (0);
-
-// 	buf = malloc(sizeof(char) * letters + 1);
-// 	if(buf == NULL)
-// 		return (0);
-	
-// }
