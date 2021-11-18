@@ -7,8 +7,10 @@
 int main(int argc, char *argv[])
 {
 	int fd1, fd2;
-	int buffer;
-	char BUFFER_SIZE = atoi(argv[3]);
+	char buffer[1024];
+	/*
+	 * char BUFFER_SIZE = atoi(argv[3]);
+	 */
 	int n;
 	if (argc != 3)
 	{
@@ -27,9 +29,9 @@ int main(int argc, char *argv[])
 		perror("open");
 		exit(EXIT_FAILURE);
 	}
-	while ((n = read(fd1, buffer, BUFFER_SIZE)) > 0)
+	while ((n = read(fd1, buffer, 1024)) > 0)
 	{
-		write(fd2, buffer, n);
+		write(fd2, buffer, 1024);
 	}
 	if (n == -1)
 	{
@@ -40,7 +42,7 @@ int main(int argc, char *argv[])
 	close(fd2);
 	exit(EXIT_SUCCESS);
 
-	return 0;
+	return (0);
 
 }
 
