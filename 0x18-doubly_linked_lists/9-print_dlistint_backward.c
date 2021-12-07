@@ -19,5 +19,5 @@ size_t print_dlistint_backward(const dlistint_t *h)
 		printf("%d\n", tmp->n);
 		tmp = tmp->prev;
 	}
-	return i;
+	return (i);
 }
