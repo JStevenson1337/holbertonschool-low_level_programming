@@ -12,63 +12,26 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new_node;
 	hash_node_t *temp;
 
-	if (!ht || !key || !value)
+	if (ht == NULL || key == NULL || value == NULL)
 		return (0);
 	index = key_index((const unsigned char *)key, ht->size);
-	new_node = malloc(sizeof(hash_node_t));
-	if (!new_node)
-		return (0);
-	new_node->key = _strdup(key);
-	new_node->value = _strdup(value);
-	new_node->next = NULL;
-	if (!new_node->key || !new_node->value)
-	{
-		free(new_node->key);
-		free(new_node->value);
-		free(new_node);
-		return (0);
-	}
-	if (!ht->array[index])
-	{
-		ht->array[index] = new_node;
-		return (1);
-	}
 	temp = ht->array[index];
-	while (temp->next)
+	while (temp != NULL)
+	{
+		if (strcmp(temp->key, key) == 0)
+		{
+			free(temp->value);
+			temp->value = strdup(value);
+			return (1);
+		}
 		temp = temp->next;
-	temp->next = new_node;
+	}
+	new_node = malloc(sizeof(hash_node_t));
+	if (new_node == NULL)
+		return (0);
+	new_node->key = strdup(key);
+	new_node->value = strdup(value);
+	new_node->next = ht->array[index];
+	ht->array[index] = new_node;
 	return (1);
-}
-
-char _strdup(char *str)
-{
-	int len = _strlen(str);
-	char *dupstr = malloc((len) * sizeof(char));
-
-	if (str == NULL)
-	{
-		return (NULL);
-	}
-	if (dupstr == NULL)
-	{
-		return (NULL);
-	}
-	else
-	{
-		dupstr = (char *) _memcpy(dupstr, str, len);
-	}
-	return (dupstr);
-}
-
-char *_memcpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int i;
-	char *csrc = (char *)src;
-	char *cdest = (char *)dest;
-
-	for (i = 0; i < n; i++)
-	{
-		cdest[i] = csrc[i];
-	}
-	return (dest);
 }
