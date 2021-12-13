@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 
 /**
@@ -44,7 +45,7 @@ void hash_table_delete(hash_table_t *ht);
 
 
 
-int _strcmp(char *s1, char *s2);
+char _strcmp(const char *s1, const char *s2);
 char *_strdup(char *str);
 char *_memcpy(char *dest, char *src, unsigned int n);
 int _strlen(char *str);
