@@ -25,7 +25,7 @@ int advanced_binary(int *array, size_t size, int value)
 	{
 		if (i == 0)
 			return (i);
-		return (advanced_binary(array, i + 1, value));
+		return (i + (array[i - 1] == value ? -1 : 1));
 	}
 
 	if (array[i] > value)
