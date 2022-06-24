@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/jeremy/Projects/Holberton/holbertonschool-low_level_programming/0x0B-malloc_free/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+_memcpy	1-strdup.c	/^char *_memcpy(char *dest, char *src, unsigned int n)$/;"	f	typeref:typename:char *
+_strdup	1-strdup.c	/^char *_strdup(char *str)$/;"	f	typeref:typename:char *
+_strlen	1-strdup.c	/^int _strlen(char *str)$/;"	f	typeref:typename:int
+_strlen	2-str_concat.c	/^int _strlen(char *str)$/;"	f	typeref:typename:int
+alloc_grid	3-alloc_grid.c	/^int **alloc_grid(int width, int height)$/;"	f	typeref:typename:int **
+create_array	0-create_array.c	/^char *create_array(unsigned int size, char c)$/;"	f	typeref:typename:char *
+free_grid	4-free_grid.c	/^void free_grid(int **grid, int height)$/;"	f	typeref:typename:void
+main	1-main.c	/^int main(void)$/;"	f	typeref:typename:int
+main	3-main.c	/^int main(void)$/;"	f	typeref:typename:int
+print_grid	3-main.c	/^void print_grid(int **grid, int width, int height)$/;"	f	typeref:typename:void
+str_concat	2-str_concat.c	/^char *str_concat(char *s1, char *s2)$/;"	f	typeref:typename:char *
