@@ -1,37 +1,51 @@
 #include "search_algos.h"
 /**
+ * ID_Val - find the value in the array
+ * @array: array to search
+ * @value: value to find
+ * @left: left index
+ * @right: right index
+ * Return: index or -1 if not found
+ */
+int ID_Val(int *array, int left, int right, int value)
+{
+	int i, mid;
+
+	mid = left + (right - left) / 2;
+	if (left == right)
+	{
+		if (value < array[left] || value > array[right])
+		{
+			printf("Searching in array: %d\n", array[mid]);
+			return (-1);
+		}
+		return (left);
+	}
+	printf("Searching in array:");
+	for (i = left; i <= right; i++)
+	{
+		if (i != right)
+			printf(" %d,", array[i]);
+		else
+			printf(" %d\n", array[i]);
+	}
+
+	if (array[mid] < value)
+		return (ID_Val(array, mid + 1, right, value));
+	else
+		return (ID_Val(array, left, mid, value));
+}
+
+/**
  * advanced_binary - advanced_binary sorting algorithm
  * @array: array of integers
- * @size: size of array
- * @value: value to sort by
- * Return: Value or -1 if not found
+ * @size: is the number of elements in array
+ * @value: is the value to search for
+ * Return: the index where value is located
  */
 int advanced_binary(int *array, size_t size, int value)
 {
-	size_t i;
-	int temp, mod2;
-
-	if (!array || !size)
+	if (!array)
 		return (-1);
-
-	printf("Searching in array: ");
-	for (i = 0; i < size; i++)
-		printf("%d%s", array[i], i + 1 == size ? "\n" : ", ");
-	mod2 = (size % 2);
-	size /= 2;
-	i = size - (size > 0 && !mod2);
-
-	if (array[i] == value)
-	{
-		if (i == 0)
-			return (i);
-		return (i + (array[i - 1] == value ? -1 : 1));
-	}
-
-	if (array[i] > value)
-		return (advanced_binary(array, i, value));
-	temp = advanced_binary(array + i + 1, size, value);
-	if (temp == -1)
-		return (-1);
-	return (size + mod2 + temp);
+	return (ID_Val(array, 0, size - 1, value));
 }
