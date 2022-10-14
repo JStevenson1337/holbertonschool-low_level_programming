@@ -12,23 +12,25 @@
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int low = 0;
-	int high = size - 1;
-	int mid;
+	size_t i, left, right;
 
-	if (!array || !size)
+	if (array == NULL)
 		return (-1);
 
-	while (low <= high)
+	for (left = 0, right = size - 1; right >= left;)
 	{
-		mid = (low + high) / 2;
-		if (array[mid] == value)
-			return (mid);
-		if (array[mid] < value)
-			low = mid + 1;
+		printf("Searching in array: ");
+		for (i = left; i < right; i++)
+			printf("%d, ", array[i]);
+		printf("%d\n", array[i]);
+
+		i = left + (right - left) / 2;
+		if (array[i] == value)
+			return (i);
+		if (array[i] > value)
+			right = i - 1;
 		else
-			high = mid - 1;
+			left = i + 1;
 	}
 	return (-1);
-
 }
