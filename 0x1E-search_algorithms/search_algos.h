@@ -23,10 +23,10 @@ int ID_Val(int *array, int left, int right, int value);
  */
 typedef struct skiplist_s
 {
-    int n;
-    size_t index;
-    struct skiplist_s *next;
-    struct skiplist_s *express;
+	int n;
+	size_t index;
+	struct skiplist_s *next;
+	struct skiplist_s *express;
 } skiplist_t;
 
 skiplist_t *linear_skip(skiplist_t *list, int value);
