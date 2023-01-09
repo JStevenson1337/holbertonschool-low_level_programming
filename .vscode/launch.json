@@ -1,13 +1,13 @@
 {
   "configurations": [
-  {
-    "type": "lldb",
-    "request": "launch",
-    "name": "Launch",
-    "program": "${workspaceFolder}/<your program>",
-    "args": [],
-    "cwd": "${workspaceFolder}"
-  },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Launch",
+      "program": "${workspaceFolder}/<your program>",
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
     {
       "name": "(gdb) Pipe Attach",
       "type": "cppdbg",
@@ -35,13 +35,11 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "/home/jeremy/Projects/Holberton/holbertonschool-low_level_programming",
-      "environment": [],
-      "program": "/home/jeremy/Projects/Holberton/holbertonschool-low_level_programming/build/Debug/outDebug",
-      "internalConsoleOptions": "openOnSessionStart",
+      "externalConsole": false,
+      "cwd": "/home/jeremy/Projects/Holberton/holbertonschool-low_level_programming-1/0x12-singly_linked_lists",
+      "program": "/home/jeremy/Projects/Holberton/holbertonschool-low_level_programming-1/0x12-singly_linked_lists/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "/usr/bin/gdb",
-      "externalConsole": false,
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
