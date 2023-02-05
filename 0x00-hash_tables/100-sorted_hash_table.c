@@ -23,24 +23,47 @@ shash_table_t *shash_table_create(unsigned long int size)
 	{
 		hash_tbl -> array[i] = NULL;
 	hash_tbl -> size = size;
-
-	return (hash_tbl);
 	}
+	return (hash_tbl);
+	
+}
 
+
+int shash_table_set(shash_table_t *ht, const char *key, const char *value)
+{
+	//TODO: To be Completed
+	__asm__("nop");
+}
+char *shash_table_get(const shash_table_t *ht, const char *key)
+{
+	//TODO: To be Completed
+	__asm__("nop");
+}
+void shash_table_print_rev(const shash_table_t *ht)
+{
+	//TODO: To be Completed
+	__asm__("nop");
+}
+void shash_table_delete(shash_table_t *ht)
+{
+	//TODO: To be Completed
+	__asm__("nop");
+}
+
+
+
+// TODO: Document Print Function
 void shash_table_print(const shash_table_t *ht)
 {
 	shash_node_t curr;
-	
-	while (ht && array)
-	{
 
+	while (ht != NULL)
+	{
+		// TODO: Finish Print Function
 	}
 
 }
 
-
-	return (0);
-}
 
 int main(void)
 {
