@@ -1,38 +1,46 @@
 #include"hash_table.h"
 /**
+ * shash_table_create - Create a hash table
  *
- *arrary[ [ [ ] ] [ [ ] ] ]
- *
- *
+ * @size: Size of the array
+ * Return: Pointer to the hash table or NULL on fail
  */
-shash_table_t *shash_table_create(unsigned long int size);
+shash_table_t *shash_table_create(unsigned long int size)
 {
-	const size_t **arr;
-	shhash_table_t *shash;
+	shash_table_t *hash_tbl;
 	shash_node_t *shead;
+	int i =0;
 
-	shead, shash = NULL;
+	hash_tbl = NULL;
 
-	while ( **array)
+	if ((hash_tbl = malloc(sizeof(shash_table_t))) == NULL)
+		return (NULL);
+
+	if ((hash_tbl -> array = malloc(sizeof(shash_table_t) * size)) == NULL)
+		return (NULL);
+
+	for (; i < size; i++)
 	{
-		shead = *(*array[0] -> *shash -> (char)key);
+		hash_tbl -> array[i] = NULL;
+	hash_tbl -> size = size;
 
-		printf("array: %lu\n", *array);
-		printf("shead: %lu\n", *shead);
-		printf("array: %lu\n", *shash);
-		printf("array: %c\n", *(char)key);
+	return (hash_tbl);
 	}
-		
 
+void shash_table_print(const shash_table_t *ht)
+{
+	shash_node_t curr;
 	
-	return (0);
+	while (ht && array)
+	{
 
+	}
 
 }
 
-/* shead: %li 
-			shash: %lu key: %s\n", *(*array[0]),
-			shead, shash, hash->key); */
+
+	return (0);
+}
 
 int main(void)
 {

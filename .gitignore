@@ -59,3 +59,17 @@ tags
 0x1E-search_algorithms/.vscode/targets.log
 0x1E-search_algorithms/.vscode/dryrun.log
 0x1E-search_algorithms/.vscode/configurationCache.log
+0x00-hash_tables/.idea/0x00-hash_tables.iml
+0x00-hash_tables/.idea/modules.xml
+0x00-hash_tables/.idea/vcs.xml
+0x00-hash_tables/.idea/codeStyles/codeStyleConfig.xml
+0x00-hash_tables/.idea/codeStyles/Project.xml
+0x00-hash_tables/.vscode/launch.json
+0x00-hash_tables/.clang-format
+0x00-hash_tables/.clang-tidy
+0x00-hash_tables/a.out
+0x00-hash_tables/linked_lists.c
+0x00-hash_tables/my_xorll.c
+0x00-hash_tables/newfile.c
+0x00-hash_tables/test.c
+0x00-hash_tables/xorll.c
