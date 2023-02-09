@@ -1,0 +1,7 @@
+;; Object Holberton Hash Tables
+;; EDE Project Files are auto generated: Do Not Edit
+(ede-proj-project "Holberton Hash Tables"
+  :file "Project.ede"
+  :name "Holberton Hash Tables"
+  :targets nil
+  :object-name "Holberton Hash Tables")
