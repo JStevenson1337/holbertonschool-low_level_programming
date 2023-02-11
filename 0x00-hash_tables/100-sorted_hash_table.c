@@ -58,9 +58,11 @@ void shash_table_print(const shash_table_t *ht)
 	shash_node_t curr;
 
 	while (ht != NULL)
-	{
-		// TODO: Finish Print Function
-	}
+	  {
+	    
+
+	    // TODO: Finish Print Function
+	  }
 
 }
 
