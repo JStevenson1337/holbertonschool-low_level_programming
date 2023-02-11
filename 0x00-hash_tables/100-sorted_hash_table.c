@@ -29,26 +29,26 @@ shash_table_t *shash_table_create(unsigned long int size)
 }
 
 
-int shash_table_set(shash_table_t *ht, const char *key, const char *value)
-{
-	//TODO: To be Completed
-	__asm__("nop");
-}
-char *shash_table_get(const shash_table_t *ht, const char *key)
-{
-	//TODO: To be Completed
-	__asm__("nop");
-}
-void shash_table_print_rev(const shash_table_t *ht)
-{
-	//TODO: To be Completed
-	__asm__("nop");
-}
-void shash_table_delete(shash_table_t *ht)
-{
-	//TODO: To be Completed
-	__asm__("nop");
-}
+// int shash_table_set(shash_table_t *ht, const char *key, const char *value)
+// {
+// 	//TODO: To be Completed
+// 	__asm__("nop");
+// }
+// char *shash_table_get(const shash_table_t *ht, const char *key)
+// {
+// 	//TODO: To be Completed
+// 	__asm__("nop");
+// }
+// void shash_table_print_rev(const shash_table_t *ht)
+// {
+// 	//TODO: To be Completed
+// 	__asm__("nop");
+// }
+// void shash_table_delete(shash_table_t *ht)
+// {
+// 	//TODO: To be Completed
+// 	__asm__("nop");
+// }
 
 
 
