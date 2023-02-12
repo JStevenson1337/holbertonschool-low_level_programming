@@ -28,14 +28,29 @@ shash_table_t *shash_table_create(unsigned long int size)
 	
 }
 
+// int shash_table_set(shash_table_t *ht, const char *key, const char *value);
+// The key/value pair should be inserted in the sorted list at the
+// right place
+// Note that here we do not want to do exactly like PHP: we want
+// to create a sorted linked list, by key (sorted on ASCII value),
+// that we can print by traversing it. See example.
+int shash_table_set(shash_table_t *ht, const char *key, const char *value)
+{
+	size_t ptr1, ptr2, ptr3;
+	int i = 0;
 
-// int shash_table_set(shash_table_t *ht, const char *key, const char *value)
-// {
-// 	//TODO: To be Completed
-// 	__asm__("nop");
-// }
-// char *shash_table_get(const shash_table_t *ht, const char *key)
-// {
+	shash_table_t *table = malloc(sizeof(shash_table_t));
+	ptr1 = (size_t)table;
+	shash_node_t *array = malloc(sizeof(shash_node_t[ptr2]));
+	ptr3 = 
+
+
+
+
+}
+
+//  char *shash_table_get(const shash_table_t *ht, const char *key)
+//  {
 // 	//TODO: To be Completed
 // 	__asm__("nop");
 // }
@@ -55,15 +70,19 @@ shash_table_t *shash_table_create(unsigned long int size)
 // TODO: Document Print Function
 void shash_table_print(const shash_table_t *ht)
 {
-	shash_node_t curr;
+	size_t *curr, **array, *curr_head;
+	int i, *j;
 
-	while (ht != NULL)
-	  {
-	    
+	*curr = (size_t)ht;
 
-	    // TODO: Finish Print Function
-	  }
+	for (i = 0; i < sizeof(shash_table_t); i++)
+	{
+		printf("%d %p\n", i, &ht[i]);
+	}
 
+
+
+	
 }
 
 
@@ -72,6 +91,8 @@ int main(void)
 	shash_table_t *ht;
 
 	ht = shash_table_create(1024);
+	shash_table_set(ht, "y", "0");
+    shash_table_print(ht);
 
-	return (0);
+    return (EXIT_SUCCESS);
 }
