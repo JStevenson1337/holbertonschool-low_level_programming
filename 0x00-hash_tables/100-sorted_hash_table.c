@@ -5,29 +5,26 @@
  * @size: Size of the array
  * Return: Pointer to the hash table or NULL on fail
  */
+
 shash_table_t *shash_table_create(unsigned long int size)
 {
-	shash_table_t *hash_tbl;
-	shash_node_t *shead;
-	int i =0;
-
-	hash_tbl = NULL;
-
-	if ((hash_tbl = malloc(sizeof(shash_table_t))) == NULL)
-		return (NULL);
-
-	if ((hash_tbl -> array = malloc(sizeof(shash_table_t) * size)) == NULL)
-		return (NULL);
-
-	for (; i < size; i++)
-	{
-		hash_tbl -> array[i] = NULL;
-	hash_tbl -> size = size;
-	}
-	return (hash_tbl);
+	shash_table_t *table;
 	
-}
 
+  if (!size)
+          return (NULL);
+
+	if ((table = malloc(sizeof(shash_table_t))) == NULL)
+          return (NULL);
+
+	if ((table -> array = malloc(sizeof(shash_table_t) * size)) == NULL)
+          return (NULL);
+
+  table -> shead = NULL;
+  table -> stail = NULL;
+  return (table);
+
+}
 // int shash_table_set(shash_table_t *ht, const char *key, const char *value);
 // The key/value pair should be inserted in the sorted list at the
 // right place
@@ -39,18 +36,22 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	size_t ptr1, ptr2, ptr3;
 	int i = 0;
 
-	shash_table_t *table = malloc(sizeof(shash_table_t));
-	ptr1 = (size_t)table;
+	shash_table_t *table = malloc(sizeof(shash_table_t)); /* allocate table and set pointer to the beginning of the table */
+	ptr1 = (size_t)table[ptr2];
 	shash_node_t *array = malloc(sizeof(shash_node_t[ptr2]));
-	ptr3 = 
+	ptr3 =  
 
 
 
 
 }
-
-//  char *shash_table_get(const shash_table_t *ht, const char *key)
-//  {
+// int shash_table_set(shash_table_t *ht, const char *key, const char *value)
+// {
+// 	//TODO: To be Completed
+// 	__asm__("nop");
+// }
+// char *shash_table_get(const shash_table_t *ht, const char *key)
+// {
 // 	//TODO: To be Completed
 // 	__asm__("nop");
 // }
@@ -73,21 +74,22 @@ void shash_table_print(const shash_table_t *ht)
 	size_t *curr, **array, *curr_head;
 	int i, *j;
 
-	*curr = (size_t)ht;
+  if (!ht)
+          return;
 
-	for (i = 0; i < sizeof(shash_table_t); i++)
-	{
-		printf("%d %p\n", i, &ht[i]);
-	}
+	*curr = (size_t)ht -> shead;
 
+  while (curr)
+  {
+          printf("'%s': '%s'\n", curr -> key, curr -> value);
 
+          curr = curr -> snext;
 
-	
+  }
 }
 
-
 int main(void)
-{
+{ 
 	shash_table_t *ht;
 
 	ht = shash_table_create(1024);
