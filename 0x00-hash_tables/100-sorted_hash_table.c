@@ -9,15 +9,30 @@
 shash_table_t *shash_table_create(unsigned long int size)
 {
     shash_table_t *table;
+    unsigned long int i;
 
     if (!size)
+    {
+        free(table);
         return (NULL);
+    }
     if ((table = malloc(sizeof(shash_table_t))) == NULL)
+    {
+        free(table);
         return (NULL);
+    }
     if ((table -> array = malloc(sizeof(shash_table_t) * size)) == NULL)
+    {
+        free(table);
         return (NULL);
+    }
+
     table -> shead = NULL;
     table -> stail = NULL;
+    for (i = 0; i < size; i++)
+    {
+        table -> array[i] = NULL;
+    }
     return (table);
 }
 // int shash_table_set(shash_table_t *ht, const char *key, const char *value);
@@ -72,7 +87,7 @@ void shash_table_print(const shash_table_t *ht)
     if (!ht)
         return;
 
-        *curr = (size_t)ht -> shead;
+    *curr = (size_t)ht -> shead;
 
     while (curr)
     {
