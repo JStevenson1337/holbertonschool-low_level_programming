@@ -43,18 +43,73 @@ shash_table_t *shash_table_create(unsigned long int size)
 // that we can print by traversing it. See example.
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
-    size_t ptr1, ptr2, ptr3;
+  size_t *current, *new_node, *after, index;
     int i = 0;
+    int a_key, new_value;
 
-    shash_table_t *table = malloc(sizeof(shash_table_t)); /* allocate table and set pointer to the beginning of the table */
-    ptr1 = (size_t)table[ptr2];
-    shash_node_t *array = malloc(sizeof(shash_node_t[ptr2]));
-    ptr3 =  
+    a_key = atoi(key);
+ 
+    if (key == NULL || ht == NULL || value == NULL)
+      return (0);
 
+    memcpy(value, *new_value, sizeof(value));
 
+    index = subindex(key, ht -> size);
+    while (current -> after != NULL)
+      {
+        current  = ht -> shead;
+        after = shead -> snext;
 
+        if (strcmp(current -> key, key) == 0)
+          {
+            free(current -> value);
+            current -> value = new_value;
+            return (1);
+          }
+      }
+    new_node = malloc(sizeof(hash_node_t));
+    if (!new_node || !new_node -> key)
+      {
+        free(new_value);
+        free(new_node);
+        return(0);
+      }
+    new_node -> value = new_value;
+    new_noode -> next = ht -> array[index];
+    ht -> array[index] = new_node;
 
+    if (ht->shead == NULL)
+      {
+        new_node -> sprev = NULL;
+        new_node -> snext = NULL;
+        ht -> shead = new_node;
+        ht -> stail = new_node;
+      }
+    else if (strcmp(ht -> shead -> key, key) > 0)
+      {
+        new_node -> sprev = NULL;
+        new_node -> snext = ht->shead;
+        ht -> shead->sprev = new_node;
+        ht -> shead = new_node;
+      }
+    else
+      {
+        for(current = ht -> shead;
+            current -> snext != NULL && strcmp(current -> snext -> key, key) < 0;
+            current = current -> snext)
+          ;
+        new_node -> sprev = current;
+        new_node -> snext = current -> snext;
+        if (current -> snext == NULL)
+          ht -> stail = new_node;
+        else
+          current -> snext -> sprev = new_node;
+        current -> snext = new_node;
+      }
+    return (1);
 }
+
+
 // int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 // {
 // 	//TODO: To be Completed
@@ -68,7 +123,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 // void shash_table_print_rev(const shash_table_t *ht)
 // {
 // 	//TODO: To be Completed
-// 	__asm__("nop");
+// 	__asm__("nop")
 // }
 // void shash_table_delete(shash_table_t *ht)
 // {

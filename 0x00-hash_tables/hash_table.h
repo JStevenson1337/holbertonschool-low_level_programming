@@ -1,9 +1,12 @@
+
 #ifndef __HASH_TABLE__
 #define __HASH_TABLE__
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <string.h>
+
 
 /* My defines */
 
