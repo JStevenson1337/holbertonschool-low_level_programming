@@ -1,9 +1,12 @@
+
 #ifndef __HASH_TABLE__
 #define __HASH_TABLE__
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <string.h>
+
 
 /* My defines */
 
@@ -56,4 +59,6 @@ void shash_table_print(const shash_table_t *ht);
 void shash_table_print_rev(const shash_table_t *ht);
 void shash_table_delete(shash_table_t *ht);
 
+unsigned long int key_index(const unsigned char *key, unsigned long int size);
+unsigned long int hash_djb2(const unsigned char *str);
 #endif /* __HASH_TABLE)__ */
